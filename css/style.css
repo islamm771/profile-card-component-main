@@ -1,0 +1,114 @@
+:root{
+    --back-color:hsl(185, 75%, 39%);
+    --pupple-color:hsl(185deg 71% 43%);
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--back-color);
+    overflow: hidden;
+    height: 100vh;
+    font-family:Kumbh Sans;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.overlay{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.pupple-top , .pupple-bottom{
+    background-color: var(--pupple-color);
+    width:700px;
+    height: 360px;
+}
+.pupple-top{
+    position: absolute;
+    top: -45px;
+    left: -115px;
+    border-radius: 0 0 400px 400px;
+}
+.pupple-bottom{
+    position: absolute;
+    bottom: -60px;
+    right: -115px;
+    margin-left: auto;
+    border-radius: 400px 400px 0 0;
+}
+.card{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    background-color: white;
+    border-radius: 15px;
+    width: 350px;
+}
+.upper-card{
+    height: 120px;
+    background-image: url('/images/bg-pattern-card.svg');
+    border-radius: 15px 15px 0 0;
+}
+.lower-card img{
+    margin-top: -45px;
+    border-radius: 50%;
+}
+.lower-card p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+.lower-card p span{
+    font-weight: normal;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+.lower-card span{
+    display: inline-block;
+    margin-bottom: 25px;
+    color:hsl(0, 0%, 59%) ;
+}
+.lower-card div{
+padding: 15px;
+}
+.lower-card div span{
+    margin: 0 15px;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+.lower-card div span span{
+    font-size:10px;
+    color:hsl(0, 0%, 59%);
+    letter-spacing:1.5px;
+}
+
+@media (max-width: 768px){
+    .lower-card div span{
+        margin-bottom:10px;
+    }
+    .lower-card div span:last-child{
+        margin-bottom: 0;
+    }
+    .pupple-top , .pupple-bottom{
+    width:400px;
+    height:400px;
+}
+.pupple-top{
+    top: -180px;
+    left: -200px;
+    border-radius: 50%;
+}
+.pupple-bottom{
+    bottom: -180px;
+    right: -200px;
+    border-radius: 50%;
+}
+}
